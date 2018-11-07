@@ -53,9 +53,15 @@ public class Demo {
           System.out.println(ArrayMethods.columnSum(test1, -8));
           System.out.println("Testing columnSum [[out of bounds]] (EXPECTED: 0) ...");
           System.out.println(ArrayMethods.columnSum(test1, 30));
-          System.out.println("Testing allRowSums (EXPECTED: [5, 5, 5, 5, 5]) ...");
+          System.out.println("\nTesting allRowSums (EXPECTED: [5, 5, 5, 5, 5]) ...");
           System.out.println(Arrays.toString(ArrayMethods.allRowSums(test1)));
           System.out.println("Testing allRowSums [[ragged array]] (EXPECTED: [5, 10, 1, 6, 5]) ...");
           System.out.println(Arrays.toString(ArrayMethods.allRowSums(testR)));
+          System.out.println("\nTesting allColSums (EXPECTED: [5, 5, 5, 5, 5]) ...");
+          System.out.println(Arrays.toString(ArrayMethods.allColSums(test1)));
+          System.out.println("Testing allColSums (EXPECTED: [0, 5, 10]) ...");
+          System.out.println(Arrays.toString(ArrayMethods.allColSums(test2)));
+          System.out.println("Testing allColSums [[ragged array]] (EXPECTED: [5, 4, 4, 4, 4, 2, 1, 1, 1, 1]) ...");
+          System.out.println(Arrays.toString(ArrayMethods.allColSums(testR)));
      }
 }
