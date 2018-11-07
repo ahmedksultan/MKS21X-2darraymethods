@@ -1,17 +1,4 @@
 public class ArrayMethods {
-     /*
-     public String toString(int[][] ary) {
-          String result = "[";
-          if (ary[0][0] == 0) {
-               result = result + "]";
-          }
-          else {
-               for (int a = 0; i < ary.length)
-          }
-          return result;
-     }
-     */
-     //PART 1
      public static int rowSum(int[][] ary, int x){
           int sum = 0;
           if (! (x > ary.length || x < 0) ) {
@@ -52,8 +39,22 @@ public class ArrayMethods {
           }
           return result;
      }
-     /*
-        public static boolean isColumnMagic(int[][] ary){}
-         //checks if the array is column-magic (this means that every column has the same column sum).
-         */
+     public static boolean isRowMagic(int[][] ary) {
+          boolean result = false;
+          for (int i = 1; i < ary.length; i++) {
+               if (rowSum(ary, i) != rowSum(ary, i-1)) {
+                    return false;
+               }
+          }
+          return true;
      }
+     public static boolean isColMagic(int[][] ary) {
+          boolean result = false;
+          for (int i = 1; i < ary.length; i++) {
+               if (columnSum(ary, i) != columnSum(ary, i-1)) {
+                    return false;
+               }
+          }
+          return true;
+     }
+}

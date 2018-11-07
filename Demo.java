@@ -33,6 +33,7 @@ public class Demo {
                     testR[a][b] = 1;
                }
           }
+
           System.out.println("Testing rowSum (EXPECTED: 5) ...");
           System.out.println(ArrayMethods.rowSum(test1, 0));
           System.out.println("Testing rowSum (EXPECTED: 3) ...");
@@ -41,6 +42,7 @@ public class Demo {
           System.out.println(ArrayMethods.rowSum(testR, 1));
           System.out.println("Testing rowSum [[out of bounds]] (EXPECTED: 0) ...");
           System.out.println(ArrayMethods.rowSum(test2, 7));
+
           System.out.println("\nTesting columnSum (EXPECTED: 5) ...");
           System.out.println(ArrayMethods.columnSum(test1, 0));
           System.out.println("Testing columnSum (EXPECTED: 10) ...");
@@ -53,15 +55,34 @@ public class Demo {
           System.out.println(ArrayMethods.columnSum(test1, -8));
           System.out.println("Testing columnSum [[out of bounds]] (EXPECTED: 0) ...");
           System.out.println(ArrayMethods.columnSum(test1, 30));
+
           System.out.println("\nTesting allRowSums (EXPECTED: [5, 5, 5, 5, 5]) ...");
           System.out.println(Arrays.toString(ArrayMethods.allRowSums(test1)));
           System.out.println("Testing allRowSums [[ragged array]] (EXPECTED: [5, 10, 1, 6, 5]) ...");
           System.out.println(Arrays.toString(ArrayMethods.allRowSums(testR)));
+
           System.out.println("\nTesting allColSums (EXPECTED: [5, 5, 5, 5, 5]) ...");
           System.out.println(Arrays.toString(ArrayMethods.allColSums(test1)));
           System.out.println("Testing allColSums (EXPECTED: [0, 5, 10]) ...");
           System.out.println(Arrays.toString(ArrayMethods.allColSums(test2)));
           System.out.println("Testing allColSums [[ragged array]] (EXPECTED: [5, 4, 4, 4, 4, 2, 1, 1, 1, 1]) ...");
           System.out.println(Arrays.toString(ArrayMethods.allColSums(testR)));
+
+          System.out.println("\nTesting isRowMagic (EXPECTED: true) ...");
+          System.out.println(ArrayMethods.isRowMagic(test1));
+          System.out.println("Testing isRowMagic (EXPECTED: true) ...");
+          System.out.println(ArrayMethods.isRowMagic(test2));
+          System.out.println("Testing isRowMagic [[ragged array]] (EXPECTED: false) ...");
+          System.out.println(ArrayMethods.isRowMagic(testR));
+
+          System.out.println("\nTesting isColMagic (EXPECTED: true) ...");
+          System.out.println(ArrayMethods.isColMagic(test1));
+          System.out.println("Testing isColMagic (EXPECTED: false) ...");
+          System.out.println(ArrayMethods.isColMagic(test2));
+          System.out.println("Testing isColMagic [[ragged array]] (EXPECTED: false) ...");
+          System.out.println(ArrayMethods.isColMagic(testR));
+
+          System.out.println("\n---TESTING COMPLETE---\n");
+
      }
 }
