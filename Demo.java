@@ -75,12 +75,12 @@ public class Demo {
           System.out.println("Testing isRowMagic [[ragged array]] (EXPECTED: false) ...");
           System.out.println(ArrayMethods.isRowMagic(testR));
 
-          System.out.println("\nTesting isColMagic (EXPECTED: true) ...");
-          System.out.println(ArrayMethods.isColMagic(test1));
-          System.out.println("Testing isColMagic (EXPECTED: false) ...");
-          System.out.println(ArrayMethods.isColMagic(test2));
-          System.out.println("Testing isColMagic [[ragged array]] (EXPECTED: false) ...");
-          System.out.println(ArrayMethods.isColMagic(testR));
+          System.out.println("\nTesting isColumnMagic (EXPECTED: true) ...");
+          System.out.println(ArrayMethods.isColumnMagic(test1));
+          System.out.println("Testing isColumnMagic (EXPECTED: false) ...");
+          System.out.println(ArrayMethods.isColumnMagic(test2));
+          System.out.println("Testing isColumnMagic [[ragged array]] (EXPECTED: false) ...");
+          System.out.println(ArrayMethods.isColumnMagic(testR));
 
           System.out.println("\n---TESTING COMPLETE---\n");
 
