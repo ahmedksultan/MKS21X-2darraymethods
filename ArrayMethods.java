@@ -32,13 +32,14 @@ public class ArrayMethods {
           }
           return sum;
      }
-      //returns the sum of the elements in Row x of ary.
-      //When x is past the last row count it as a zero. (NO indexOutOfBounds should ever occur)
-      /*
-        public static int columnSum(int[][] ary, int x){}
-         //returns the sum of the elements in Column x of ary (careful with rows of different lengths!).
-         //When a row is not long enough to reach the column count it as a zero. (NO indexOutOfBounds should ever occur)
-
+     public static int[] allRowSums(int[][] ary) {
+          int[] result = new int[ary.length];
+          for (int i = 0; i < ary.length; i++) {
+               result[i] = rowSum(ary, i);
+          }
+          return result;
+     }
+     /*
         *PART 2 - use prior methods where appropriate
         public static int[] allRowSums(int[][] ary){}
          //returns an array of the row sums for each row of ary.
